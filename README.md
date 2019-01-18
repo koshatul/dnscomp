@@ -3,14 +3,14 @@ ISC DNS Compliance Testing in a docker container, based on the [DNS-Compliance-T
 
 ### Use
 ```
-( echo "github.com"; echo "microsoft.com" ) | docker run -i --rm koshatul/dnscomp:latest -4
+( echo "github.com"; echo "microsoft.com" ) | docker run -i --rm koshatul/dnscomp:latest -p
 ```
 
 `( echo "github.com"; echo "microsoft.com" )` is the list of domains to check, you can also pipe in a file with a list of domains.
 
 `docker run -i --rm koshatul/dnscomp:latest` is the docker command, specifying an interactive session, delete the container when finished and to use the latest koshatul/dnscomp:latest image.
 
-`-4` is a command line parameter for [genreport](https://gitlab.isc.org/isc-projects/DNS-Compliance-Testing)
+`-p` is a command line parameter for [genreport](https://gitlab.isc.org/isc-projects/DNS-Compliance-Testing), you can use any of the command line options below.
 
 ### Command line options for genreport
 ```
